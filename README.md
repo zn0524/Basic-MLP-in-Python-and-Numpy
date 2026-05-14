@@ -143,9 +143,9 @@ $$
 $$
 
 Where:
-* (a_1) = hidden layer activations
-* (W_2) = second layer weights
-* (\sigma'(z)) = sigmoid derivative
+* $(a_1)$ = hidden layer activations
+* $(W_2)$ = second layer weights
+* $(\sigma'(z))$ = sigmoid derivative
 Hidden layer error:
 ```python
 error_hidden = error.dot(self.weights2.T) * sigmoid_derivative(layer1)
@@ -180,13 +180,15 @@ self.weights2 -= self.learning_rate * d_weights
 self.weights1 -= self.learning_rate * d_weights
 ```
 This follows the gradient descent equation:
+
 $$
 w:=w-\eta\frac{\partial L}{\partial w}
 $$
+
 Where:
-* (w) = weights
-* (\eta) = learning rate
-* (\frac{\partial L}{\partial w}) = gradient
+* $(w)$ = weights
+* $(\eta)$ = learning rate
+* $(\frac{\partial L}{\partial w})$ = gradient
 The network slowly adjusts the weights to minimize error.
 
 # Training the model:
